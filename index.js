@@ -39,8 +39,7 @@ bot.command("Jobs", async (ctx) => {
 
   if (!userMessage) {
     return ctx.reply(
-      "📝 Please enter a job title, location, and/or employment type.\n" +
-        "Example: `/Jobs Frontend Developer`"
+      "📝 Please enter a job title\n" + "Example: `/Jobs Frontend Developer`"
     );
   }
 
