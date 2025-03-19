@@ -5,7 +5,7 @@ const { message } = require("telegraf/filters");
 const { jokesApi } = require("./api/jokes");
 const { jobsApi } = require("./api/jobs");
 
-const bot = new Telegraf(process.env.BOT_TOKEN);
+const bot = new Telegraf(process.env.BOT_TOKEN, { polling: true });
 
 bot.start((ctx) => {
   ctx.reply(
