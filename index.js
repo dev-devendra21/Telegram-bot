@@ -34,7 +34,17 @@ bot.command("Jokes", async (ctx) => {
 
 // Jobs API
 bot.command("Jobs", async (ctx) => {
-  const jobs = await jobsApi();
+  console.log(ctx);
+  const userMessage = ctx.message.text.replace("/Jobs", "").trim();
+
+  if (!userMessage) {
+    return ctx.reply(
+      "📝 Please enter a job title, location, and/or employment type.\n" +
+        "Example: `/Jobs Frontend Developer`"
+    );
+  }
+
+  const jobs = await jobsApi(userMessage);
   if (jobs && jobs.length > 0) {
     jobs.forEach((job) => {
       const {

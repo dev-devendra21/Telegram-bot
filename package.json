@@ -10,7 +10,9 @@
     "dev": "node --watch index.js"
   },
   "keywords": [
-    "jokes"
+    "jokes",
+    "jobs",
+    "sample songs"
   ],
   "author": "devendra chandana",
   "license": "ISC",
